@@ -150,8 +150,7 @@ jobs:
       - git/shallow-checkout
       - android/restore-gradle-cache
       - copy-gradle-properties
-      - update-gradle-memory:
-          jvmargs: "Xmx1536m"
+      - update-gradle-memory
       - run:
           name: Build
           command: ./gradlew WordPress:assembleWordPressVanillaDebug --stacktrace
